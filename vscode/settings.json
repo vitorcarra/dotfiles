@@ -32,6 +32,7 @@
     "projectManager.git.baseFolders": ["$home/Projects/git"],
     "projectManager.sortList": "Recent",
     "editor.tabSize": 4,
+    "editor.autoIndent": "full",
     "workbench.settings.editor": "json",
     "vim.hlsearch": true,
     "vim.leader": "<space>",
@@ -65,25 +66,9 @@
         ]
       },
       {
-        "before": [
-          "leader",
-          "x"
-        ],
-        "commands": [
-          ":x!"
-        ]
+        "before": [ "leader", "x" ], "commands": [ ":x!" ]
       },
-      {
-        "after": [
-          "g",
-          "g",
-          "V",
-          "G"
-        ],
-        "before": [
-          "<c-a>"
-        ]
-      },
+      { "after": [ "g", "g", "V", "G" ], "before": [ "<c-a>" ] },
       {
         "before": [
           "<leader>",
@@ -136,18 +121,60 @@
         "before": [
           "L"
         ]
-      },
-      {
-        "before": [
-          "leader",
-          "i"
-        ],
-        "commands": [
-          "extension.toggleBool"
-        ]
-      }
+      }, 
+	// NAVIGATION
+		// switch b/w buffers
+		{ "before": ["<S-h>"], "commands": [":bprevious"] },
+		{ "before": ["<S-l>"], "commands": [":bnext"] },
+
+		// splits
+		{ "before": ["leader", "v"], "commands": [":vsplit"] },
+		{ "before": ["leader", "s"], "commands": [":split"] },
+
+		// panes
+		{
+		"before": ["leader", "h"],
+		"commands": ["workbench.action.focusLeftGroup"]
+		},
+		{
+		"before": ["leader", "j"],
+		"commands": ["workbench.action.focusBelowGroup"]
+		},
+		{
+		"before": ["leader", "k"],
+		"commands": ["workbench.action.focusAboveGroup"]
+		},
+		{
+		"before": ["leader", "l"],
+		"commands": ["workbench.action.focusRightGroup"]
+		},
+		{ "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+      // Stay in visual mode while indenting
+      { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+      { "before": [">"], "commands": ["editor.action.indentLines"] },
+      // Move selected lines while staying in visual mode
+      { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+      { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+      // toggle comment selection
+      { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
     ],
-    "vim.useSystemClipboard": true,
-    "workbench.startupEditor": "readme",
-    "zenMode.hideLineNumbers": false
+      "vim.useSystemClipboard": true,
+      "workbench.startupEditor": "readme",
+      "zenMode.hideLineNumbers": false,
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "go.toolsManagement.autoUpdate": true,
+      "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
