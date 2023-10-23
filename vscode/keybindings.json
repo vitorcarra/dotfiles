@@ -1,38 +1,45 @@
 // Place your key bindings in this file to override the defaults
 [
-	{
-		"key": "cmd+o",
-		"command": "projectManager.listGitProjects#sideBarGit"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "workbench.files.action.focusFilesExplorer",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "a",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "r",
-		"command": "renameFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "c",
-		"command": "filesExplorer.copy",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "d",
-		"command": "deleteFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "p",
-		"command": "filesExplorer.paste",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-
+  {
+    "key": "cmd+o",
+    "command": "projectManager.listGitProjects#sideBarGit"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorerjpaste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.newInActiveWorkspace"
+  }
 ]
