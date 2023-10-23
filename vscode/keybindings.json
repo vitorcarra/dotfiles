@@ -31,7 +31,7 @@
   },
   {
     "key": "p",
-    "command": "filesExplorerjpaste",
+    "command": "filesExplorer.paste",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
