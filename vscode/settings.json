@@ -146,5 +146,7 @@
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false
 }
