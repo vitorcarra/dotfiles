@@ -2,8 +2,10 @@
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
+  "files.trimTrailingWhitespace": true,
   "editor.formatOnSave": true,
   "editor.suggest.insertMode": "replace",
+  "workbench.sideBar.location": "left",
   "editor.codeActionsOnSave": {
     "source.addMissingImports": true,
     "source.organizeImports": true
@@ -18,7 +20,7 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "redhat.telemetry.enabled": false,
   "code-runner.runInTerminal": true,
   "dart.debugExternalPackageLibraries": false,
@@ -104,6 +106,14 @@
       "before": ["leader", "l"],
       "commands": ["workbench.action.focusRightGroup"]
     },
+    {
+      "before": ["leader", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"]
+    },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     {
@@ -133,5 +143,8 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
   }
 }
