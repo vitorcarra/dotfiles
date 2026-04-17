@@ -1,3 +1,8 @@
+require("lazy").setup({
+    spec = {
+        { import = "plugins" },
+    },
+})
 require("config.remap")
 require("config.set")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -10,8 +15,3 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 local opts = {}
-require("lazy").setup({
-	spec = {
-		{ import = "plugins" },
-	},
-})
